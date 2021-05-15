@@ -105,7 +105,9 @@ class Game : public graphics::AnimationEventListener,
 
   void UpdateScreen() {
     std::string score_message = "score: ";
-    score_message += p_score_;
+    score_message += std::to_string(GetScore());
+    // std::string score_message = "score: ";
+    // score_message += p_score_;
     game_screen.DrawRectangle(0, 0, game_screen.GetWidth(),
                               game_screen.GetHeight(), 255, 255, 255);
     game_screen.DrawText(0, 0, score_message, 20, 0, 200, 225);

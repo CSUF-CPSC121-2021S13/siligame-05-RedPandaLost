@@ -14,8 +14,8 @@ void PlayerProjectile::Draw(graphics::Image &back) {
 
 void PlayerProjectile::Move(const graphics::Image &back) {
   if (!IsOutOfBounds(back)) {
-    SetX(GetX() + 1);
-    SetY(GetY() + 1);
+    SetX(GetX() - 1);
+    SetY(GetY() - 1);
   } else {
     is_active = false;
   }
